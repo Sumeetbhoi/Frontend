@@ -1,149 +1,55 @@
 .theme-color-1 {
-  --theme-color: #ff4c3b;
+  --theme-color: #242424;
 }
-.theme-color-2 {
-  --theme-color: #f0583d;
-}
-.theme-color-3 {
-  --theme-color: #f0b54d;
-}
-.theme-color-4 {
-  --theme-color: #e4604a;
-}
-.theme-color-5 {
-  --theme-color: #d4b196;
-}
-.theme-color-6 {
-  --theme-color: #866e6c;
-}
-.theme-color-7 {
-  --theme-color: #cc2121;
-}
-.theme-color-8 {
-  --theme-color: #dc457e;
-}
-.theme-color-9 {
-  --theme-color: #6d7e87;
-}
-.theme-color-10 {
-  --theme-color: #fa869b;
-}
-.theme-color-11 {
-  --theme-color: #81ba00;
-}
-.theme-color-12 {
-  --theme-color: #fe816d;
-}
-.theme-color-13 {
-  --theme-color: #01effc;
-  --theme-color2: #485ff2;
-}
-.theme-color-14 {
-  --theme-color: #5d7227;
-  --theme-color2: #203f15;
-}
-.theme-color-15 {
-  --theme-color: #ff9944;
-}
-.theme-color-16 {
-  --theme-color: #5fcbc4;
-}
-.theme-color-17 {
-  --theme-color: #e38888;
-}
-.theme-color-18 {
-  --theme-color: #000000;
-}
-.theme-color-19 {
-  --theme-color: #3e5067;
-}
-.theme-color-20 {
-  --theme-color: #3fc1c9;
-}
-.theme-color-21 {
-  --theme-color: #5ecee4;
-}
-.theme-color-22 {
-  --theme-color: #38c6bb;
-}
-.theme-color-23 {
-  --theme-color: #2874f0;
-}
-.theme-color-24 {
-  --theme-color: #90453e;
-}
-.theme-color-25 {
-  --theme-color: #3fd09e;
-}
-.theme-color-26 {
-  --theme-color: #6d6659;
-}
-.theme-color-27 {
-  --theme-color: #f39910;
-  --theme-color2: #394868;
-}
-.theme-color-28 {
-  --theme-color: #387ef0;
-}
-.theme-color-29 {
-  --theme-color: #dd5e89;
-  --theme-color2: #f7bb97;
-}
-.theme-color-30 {
-  --theme-color: #206664;
-  --theme-color2: #ee7a63;
-}
-.theme-color-31 {
-  --theme-color: #ee7a63;
-}
-.theme-color-32 {
-  --theme-color: #234ca1;
-}
-.theme-color-32.dark {
-  background-color: #262934;
-}
+
 /* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
+/* Existing Styles */
+
+/* Add your existing CSS styles here */
+
+/* New Styles for Modal */
+/* Add this CSS code to your existing stylesheet or a new one */
+
+#subscribe-modal {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 250px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+  animation: slide-in 0.5s ease;
+  transform: translateX(100%); /* Initially off screen */
+}
+
+@keyframes slide-in {
+  from {
+      transform: translateX(100%);
   }
-  
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
+  to {
+      transform: translateX(0);
   }
-  
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  /* Additional Styling */
-  .modal-message-success {
-    color: green;
-  }
-  
-  .modal-message-error {
-    color: red;
-  }
-  
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#subscribe-message {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
 :root {
-  --theme-color: #ff4c3b;
+  --theme-color: #242424;
 }
 @-webkit-keyframes textNoise1 {
   0% {
@@ -1295,7 +1201,7 @@ button {
   padding: 13px 29px;
   color: #fff;
   letter-spacing: 0.05em;
-  border: 2px solid var(--theme-color);
+  border: 5px solid var(--theme-color);
   background-image: linear-gradient(
     30deg,
     var(--theme-color) 50%,
@@ -36707,111 +36613,11 @@ body.rtl .account-setting {
   }
 }
 .theme-color-1 {
-  --theme-color: #ff4c3b;
+  --theme-color: #242424;
 }
-.theme-color-2 {
-  --theme-color: #f0583d;
-}
-.theme-color-3 {
-  --theme-color: #f0b54d;
-}
-.theme-color-4 {
-  --theme-color: #e4604a;
-}
-.theme-color-5 {
-  --theme-color: #d4b196;
-}
-.theme-color-6 {
-  --theme-color: #866e6c;
-}
-.theme-color-7 {
-  --theme-color: #cc2121;
-}
-.theme-color-8 {
-  --theme-color: #dc457e;
-}
-.theme-color-9 {
-  --theme-color: #6d7e87;
-}
-.theme-color-10 {
-  --theme-color: #fa869b;
-}
-.theme-color-11 {
-  --theme-color: #81ba00;
-}
-.theme-color-12 {
-  --theme-color: #fe816d;
-}
-.theme-color-13 {
-  --theme-color: #01effc;
-  --theme-color2: #485ff2;
-}
-.theme-color-14 {
-  --theme-color: #5d7227;
-  --theme-color2: #203f15;
-}
-.theme-color-15 {
-  --theme-color: #ff9944;
-}
-.theme-color-16 {
-  --theme-color: #5fcbc4;
-}
-.theme-color-17 {
-  --theme-color: #e38888;
-}
-.theme-color-18 {
-  --theme-color: #000000;
-}
-.theme-color-19 {
-  --theme-color: #3e5067;
-}
-.theme-color-20 {
-  --theme-color: #3fc1c9;
-}
-.theme-color-21 {
-  --theme-color: #5ecee4;
-}
-.theme-color-22 {
-  --theme-color: #38c6bb;
-}
-.theme-color-23 {
-  --theme-color: #2874f0;
-}
-.theme-color-24 {
-  --theme-color: #90453e;
-}
-.theme-color-25 {
-  --theme-color: #3fd09e;
-}
-.theme-color-26 {
-  --theme-color: #6d6659;
-}
-.theme-color-27 {
-  --theme-color: #f39910;
-  --theme-color2: #394868;
-}
-.theme-color-28 {
-  --theme-color: #387ef0;
-}
-.theme-color-29 {
-  --theme-color: #dd5e89;
-  --theme-color2: #f7bb97;
-}
-.theme-color-30 {
-  --theme-color: #206664;
-  --theme-color2: #ee7a63;
-}
-.theme-color-31 {
-  --theme-color: #ee7a63;
-}
-.theme-color-32 {
-  --theme-color: #234ca1;
-}
-.theme-color-32.dark {
-  background-color: #262934;
-}
+
 :root {
-  --theme-color: #ff4c3b;
+  --theme-color: #242424;
 }
 @-webkit-keyframes textNoise1 {
   0% {

@@ -46,31 +46,19 @@
     />
 
     <!-- Animate icon -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../assets/css/vendors/animate.css"
-    />
+    <link rel="stylesheet" type="text/css" href="animate.css" />
 
     <!-- Themify icon -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../assets/css/vendors/themify-icons.css"
-    />
+    <link rel="stylesheet" type="text/css" href="" />
 
     <!-- Bootstrap css -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../assets/css/vendors/bootstrap.css"
-    />
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css" />
 
     <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
   </head>
 
-  <body class="theme-color-1" style="overflow: auto; --theme-color: #6c4624">
+  <body class="theme-color-1">
     <div class="template-password">
       <div class="container">
         <div id="container" class="text-center">
@@ -113,6 +101,12 @@
                       </div>
                     </div>
                   </form>
+                  <div id="subscribe-modal">
+                    <span class="close">&times;</span>
+                    <div id="subscribe-message"></div>
+                  </div>
+
+                  <!-- Modal -->
                 </div>
               </div>
             </div>
@@ -124,27 +118,19 @@
       </div>
     </div>
     <!-- Modal -->
-<div id="subscriptionModal" class="modal">
-    <div class="modal-content">
-      <div class="progress-container">
-        <div class="progress-bar" id="progress-bar"></div>
-      </div>
-      <span class="close">&times;</span>
-      <div id="modal-message"></div>
-    </div>
-  </div>
-  
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // ... (your existing code)
         const form = document.querySelector(".theme-form");
         const messageDiv = document.getElementById("subscribe-message");
+        const modal = document.getElementById("subscribe-modal");
+        const closeButton = document.querySelector(".close");
+
         form.addEventListener("submit", async function (event) {
           event.preventDefault();
-          // ... (your existing code)
           const emailInput = document.getElementById("email");
           const email = emailInput.value;
+
           try {
             const response = await fetch("subscribe.php", {
               method: "POST",
@@ -157,41 +143,20 @@
             const result = await response.text();
 
             if (response.ok) {
-              showModal(result, "modal-message-success");
+              messageDiv.textContent = result;
+              modal.style.display = "block";
             } else {
-              showModal(
-                "Failed to subscribe. Please try again later.",
-                "modal-message-error"
-              );
+              messageDiv.textContent =
+                "Failed to subscribe. Please try again later.";
             }
           } catch (error) {
             console.error("An error occurred:", error);
-            showModal(
-              "An error occurred. Please try again later.",
-              "modal-message-error"
-            );
           }
         });
 
-        function showModal(message, messageClass) {
-          const modal = document.getElementById("subscriptionModal");
-          const modalMessage = document.getElementById("modal-message");
-
-          modalMessage.textContent = message;
-          modalMessage.className = messageClass;
-          modal.style.display = "block";
-
-          const closeBtn = document.querySelector(".close");
-          closeBtn.addEventListener("click", function () {
-            modal.style.display = "none";
-          });
-
-          window.addEventListener("click", function (event) {
-            if (event.target === modal) {
-              modal.style.display = "none";
-            }
-          });
-        }
+        closeButton.addEventListener("click", function () {
+          modal.style.display = "none";
+        });
       });
     </script>
 
